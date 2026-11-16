@@ -4,12 +4,10 @@ import { Link, NavLink } from 'react-router-dom';
 
 const links = [
   { label: 'Home', path: '/' },
-  { label: 'Image Analysis', path: '/image-analysis' },
-  { label: 'Report Explainer', path: '/report-explainer' },
-  { label: 'Medical Library', path: '/medical-library' },
-  { label: 'Documents', path: '/documents' },
-  { label: 'Model Insights', path: '/model-insights' },
   { label: 'About', path: '/about' },
+  { label: 'Features', path: '/features' },
+  { label: 'How it works', path: '/how-it-works' },
+  { label: 'Contact', path: '/contact' },
 ];
 
 export default function Navbar() {
@@ -46,8 +44,11 @@ export default function Navbar() {
               {label}
             </NavLink>
           ))}
-          <Link className="site-nav-cta" to="/contact" onClick={() => setOpen(false)}>
-            Contact <ArrowRight size={15} />
+          <Link className="site-nav-login" to="/login" onClick={() => setOpen(false)}>
+            Sign in
+          </Link>
+          <Link className="site-nav-cta" to="/register" onClick={() => setOpen(false)}>
+            Get started <ArrowRight size={15} />
           </Link>
         </nav>
       </div>

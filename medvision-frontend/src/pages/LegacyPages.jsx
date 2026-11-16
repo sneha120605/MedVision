@@ -165,10 +165,10 @@ function ImageAnalysisPage() {
         <div>
           <h3>About supported medical images</h3>
           <p>
-            The planned first research task is chest X-ray classification.
-            Ordinary photographs and unrelated images are not appropriate
-            medical inputs. No clinical conclusion can be drawn from this
-            frontend.
+            The initial project focus is brain MRI analysis. Chest X-rays and
+            bone X-rays are future-scope categories. Ordinary photographs and
+            unrelated images are not appropriate medical inputs, and no
+            clinical conclusion can be drawn from this frontend.
           </p>
         </div>
       </section>

@@ -24,14 +24,14 @@ export default function Home() {
     <div className="home-page">
       <section className="home-hero">
         <div className="home-hero-copy">
-          <div className="home-eyebrow"><Sparkles size={15} /> Medical information, made clearer</div>
-          <h1>See the bigger picture behind medical information.</h1>
-          <p>MedVision is a professional learning platform for exploring medical imaging, understanding report language, and learning how machine-learning systems should be evaluated responsibly.</p>
+          <div className="home-eyebrow"><Sparkles size={15} /> AI-powered imaging research, with care</div>
+          <h1>Medical imaging research, built around people.</h1>
+          <p>MedVision is a privacy-first platform concept for brain MRI analysis and consent-based research — bringing patients and researchers together through clear, responsible workflows.</p>
           <div className="home-hero-actions">
-            <Link className="home-button primary" to="/image-analysis">Explore the platform <ArrowRight size={17} /></Link>
-            <Link className="home-button secondary" to="/about">How MedVision works</Link>
+            <Link className="home-button primary" to="/register">Explore the platform <ArrowRight size={17} /></Link>
+            <Link className="home-button secondary" to="/how-it-works">How MedVision works</Link>
           </div>
-          <div className="home-trust-note"><ShieldCheck size={17} /> Educational and research use only — not a diagnostic service.</div>
+          <div className="home-trust-note"><ShieldCheck size={17} /> Frontend demonstration only — not a diagnostic service.</div>
         </div>
         <div className="home-hero-visual" aria-label="Illustration of connected medical information" role="img">
           <div className="home-visual-ring ring-one" /><div className="home-visual-ring ring-two" />
@@ -70,6 +70,15 @@ export default function Home() {
       <section className="home-section privacy-section">
         <div className="privacy-copy"><span className="home-kicker">Privacy & responsible use</span><h2>Trust starts with boundaries.</h2><p>Current features are designed for learning and frontend exploration. Avoid uploading identifiable health information; the prototype does not provide secure patient storage or clinical services.</p><Link className="home-text-link" to="/about">Read our project principles <ArrowRight size={16} /></Link></div>
         <div className="privacy-points"><div><LockKeyhole size={20} /><span><strong>Data minimisation</strong>Share only what is necessary for your learning task.</span></div><div><ShieldCheck size={20} /><span><strong>Visible limitations</strong>Uncertainty and scope are part of the explanation.</span></div><div><CheckCircle2 size={20} /><span><strong>Human oversight</strong>Qualified professionals remain essential for care.</span></div></div>
+      </section>
+
+      <section className="home-section portal-entry-section">
+        <div className="home-section-heading centered"><span className="home-kicker">Choose your workspace</span><h2>One platform. Two thoughtful experiences.</h2><p>Start with a patient-focused imaging workspace or explore the research portal demo.</p></div>
+        <div className="portal-entry-grid">
+          <article className="portal-entry-card"><span><FileImage size={22} /></span><div><h3>Patient portal</h3><p>Preview MRI uploads, analysis status, reports, and optional research participation.</p></div><Link to="/login?role=patient">Explore patient demo <ArrowRight size={15} /></Link></article>
+          <article className="portal-entry-card researcher"><span><Microscope size={22} /></span><div><h3>Researcher portal</h3><p>Explore a privacy-first interface for approved, de-identified research cases.</p></div><Link to="/login?role=researcher">Explore researcher demo <ArrowRight size={15} /></Link></article>
+        </div>
+        <div className="home-focus-note"><Brain size={18} /><span><strong>Initial focus: Brain MRI.</strong> Chest X-rays and bone X-rays are future-scope categories, not currently available analyses.</span></div>
       </section>
 
       <section className="home-section faq-section"><div className="home-section-heading centered"><span className="home-kicker">Questions, answered</span><h2>What MedVision is — and is not.</h2></div><div className="faq-list">{faqs.map(([question, answer]) => <details key={question}><summary><span>{question}</span><HelpCircle size={18} /></summary><p>{answer}</p></details>)}</div></section>
